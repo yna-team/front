@@ -1,5 +1,3 @@
-import { Category } from "./Category";
-
 export const Header = () => {
     return (
         <header className="sticky top-0 z-50 flex h-14 items-center justify-between bg-white px-4 border-b border-[#F5F5F5] ">
@@ -19,9 +17,9 @@ export const Header = () => {
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         className="lucide lucide-map-pin text-[#E83462]"
                         aria-hidden="true"
                     >
@@ -31,6 +29,12 @@ export const Header = () => {
                     <span className="text-[16px] font-bold tracking-[-0.3px] text-[#191919]">
                         마포구 망원동
                     </span>
+                    {/* <select name="" id="">
+                        <option value="">전체</option>
+                        <option value="">마포구</option>
+                        <option value="">영등포구</option>
+                        <option value="">양천구</option>
+                    </select> */}
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -38,9 +42,9 @@ export const Header = () => {
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         className="lucide lucide-chevron-down text-[#191919]"
                         aria-hidden="true"
                     >
@@ -60,9 +64,9 @@ export const Header = () => {
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             className="lucide lucide-bell text-[#191919]"
                             aria-hidden="true"
                         >
@@ -83,9 +87,9 @@ export const Header = () => {
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             className="lucide lucide-shopping-bag text-[#191919]"
                             aria-hidden="true"
                         >

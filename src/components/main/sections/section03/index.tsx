@@ -1,82 +1,82 @@
-"use client";
-
-import Image from "next/image";
-
-const ITEMS = [
-    { src: "/images/1.png", alt: "", price: 3600, salePer: 47 },
-    { src: "/images/2.png", alt: "", price: 1200, salePer: 60 },
-    { src: "/images/3.png", alt: "", price: 5800, salePer: 15 },
-];
-
 export const MainSection03 = () => {
     return (
-        <div className="bg-[#fff] mt-[1px] px-[1rem] pb-[1.25rem] pt-[1rem]">
-            <div className="flex items-center justify-between mb-[.75rem]">
-                <div className="flex items-center gap-[.5rem]">
-                    <div className="gap-[.625rem] items-center flex-wrap flex">
-                        <h2 className="text-[17px] font-[800] text-[#111] break-all tracking-[-.02em]">
-                            오늘만 이 가격
-                        </h2>
-                        <div className="flex items-center gap-[4px]">
-                            <span className="bg-[#111] text-[#fff] rounded-[7px] px-[5px] py-[9px] text-[19px] font-[800] tabular-nums min-w-[38px] text-center tracking-[-.02em] leading-[1]">
-                                03
-                            </span>
-                            <span className="text-[16px] font-[800] text-[#333] leading-[1]">
-                                :
-                            </span>
-                            <span className="bg-[#111] text-[#fff] rounded-[7px] px-[5px] py-[9px] text-[19px] font-[800] tabular-nums min-w-[38px] text-center tracking-[-.02em] leading-[1]">
-                                03
-                            </span>
-                            <span className="text-[16px] font-[800] text-[#333] leading-[1]">
-                                :
-                            </span>
-                            <span className="bg-[#111] text-[#fff] rounded-[7px] px-[5px] py-[9px] text-[19px] font-[800] tabular-nums min-w-[38px] text-center tracking-[-.02em] leading-[1]">
-                                03
-                            </span>
-                        </div>
-                    </div>
+        <>
+            <div className="mb-4 flex items-end justify-between px-4 pt-8">
+                <div>
+                    <p className="mb-1 text-[13px] font-medium tracking-[-0.2px] text-[#E83462]">
+                        매니저 추천 영상
+                    </p>
+                    <h2 className="text-[22px] font-extrabold leading-[1.25] tracking-[-0.5px] text-[#191919]">
+                        함께TV
+                    </h2>
                 </div>
             </div>
-            <div className="gap-[.75rem] flex overflow-x-auto scrollbar-hide">
-                {ITEMS.map((item, i) => (
-                    <div
-                        key={i}
-                        className="cursor-pointer flex-shrink-0 w-[140px] transition-all duration-200 cubic-bezier(.16, 1, .3, 1)"
-                    >
-                        <div className="mb-[.5rem] bg-[#0000000a] rounded-[16px] p-[3px] shadow-[0_2px_12px_rgba(0,0,0,0.07)]">
-                            <div className="bg-[#fff] rounded-[13px] overflow-hidden shadow-[inset_0_1px_0_rgba(255,255,255,0.9)]">
-                                <div className="aspect-[1] overflow-hidden relative flex items-center justify-center">
-                                    <Image
-                                        src={item.src}
-                                        alt={item.alt}
-                                        width={200}
-                                        height={200}
-                                        className="absolute inset-0 w-full h-full object-cover object-center-top"
-                                    />
-                                    <div className="absolute top-[8px] left-[8px] bg-[#E8352A] text-[#fff] text-[9px] font-[800] py-[2px] px-[7px] rounded-[3px]">
-                                        오늘만
-                                    </div>
-                                    <div className="absolute top-[8px] right-[8px] bg-[#111] text-[#fff] text-[9px] font-[800] py-[2px] px-[7px] rounded-[3px]">
-                                        -{item.salePer}%
-                                    </div>
-                                </div>
-                            </div>
+            <div className="flex gap-3 overflow-x-auto px-4 pb-8 [-ms-overflow-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+                <article className="w-[200px] flex-none">
+                    <div className="relative h-[112px] w-[200px] overflow-hidden rounded-[10px] bg-[#F5F5F5]">
+                        <div className="absolute left-1/2 top-1/2 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/90">
+                            <span className="ml-[2px] text-[12px] text-[#191919]">▶</span>
                         </div>
-                        <p className="text-[12px] text-[#999] mb-[1px] line-through">
-                            {item.price.toLocaleString()}원
-                        </p>
-                        <p className="text-[15px] font-[900] text-[#E8352A] tracking-[-.03em] mb-[8px]">
-                            {(
-                                Math.floor((item.price * (100 - item.salePer) * 0.01) / 10) * 10
-                            ).toLocaleString()}
-                            원
-                        </p>
-                        <button className="pt-[9px] pb-[9px] text-[12px] bg-[#E8352A] text-[#fff] font-[700] rounded-[10px] w-full align-center shadow-[0_2px_10px_rgba(232,53,42,0.25)]">
-                            바로 구매
-                        </button>
+                        <span className="absolute bottom-2 right-2 rounded-[4px] bg-black/70 px-[6px] py-[3px] text-[11px] font-bold text-white">
+                            3:24
+                        </span>
                     </div>
-                ))}
+                    <div className="mt-2">
+                        <div className="line-clamp-2 text-[14px] font-medium leading-[1.4] tracking-[-0.2px] text-[#191919]">
+                            망원시장 골목 맛집 탐방
+                        </div>
+                        <div className="mt-[3px] text-[12px] tracking-[-0.1px] text-[#8C8C8C]">
+                            조회 1.2만
+                        </div>
+                    </div>
+                </article>
+                <article className="w-[200px] flex-none">
+                    <div className="relative h-[112px] w-[200px] overflow-hidden rounded-[10px] bg-[#F5F5F5]">
+                        <div className="absolute left-1/2 top-1/2 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/90">
+                            <span className="ml-[2px] text-[12px] text-[#191919]">▶</span>
+                        </div>
+                        <span className="absolute bottom-2 right-2 rounded-[4px] bg-black/70 px-[6px] py-[3px] text-[11px] font-bold text-white">
+                            3:24
+                        </span>
+                    </div>
+                    <div className="mt-2">
+                        <div className="line-clamp-2 text-[14px] font-medium leading-[1.4] tracking-[-0.2px] text-[#191919]">
+                            망원시장 골목 맛집 탐방
+                        </div>
+                        <div className="mt-[3px] text-[12px] tracking-[-0.1px] text-[#8C8C8C]">
+                            조회 1.2만
+                        </div>
+                    </div>
+                </article>
+                <article className="w-[200px] flex-none">
+                    <div className="relative h-[112px] w-[200px] overflow-hidden rounded-[10px] bg-[#F5F5F5]">
+                        <div className="absolute left-1/2 top-1/2 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/90">
+                            <span className="ml-[2px] text-[12px] text-[#191919]">▶</span>
+                        </div>
+                        <span className="absolute bottom-2 right-2 rounded-[4px] bg-black/70 px-[6px] py-[3px] text-[11px] font-bold text-white">
+                            3:24
+                        </span>
+                    </div>
+                    <div className="mt-2">
+                        <div className="line-clamp-2 text-[14px] font-medium leading-[1.4] tracking-[-0.2px] text-[#191919]">
+                            망원시장 골목 맛집 탐방
+                        </div>
+                        <div className="mt-[3px] text-[12px] tracking-[-0.1px] text-[#8C8C8C]">
+                            조회 1.2만
+                        </div>
+                    </div>
+                </article>
             </div>
-        </div>
+            <div className="mt-4">
+                <div className="px-4">
+                    <button
+                        type="button"
+                        className="flex h-[52px] w-full items-center justify-center rounded-[12px] bg-[#FFF0F4] text-[16px] font-bold tracking-[-0.3px] text-[#E83462]"
+                    >
+                        더보기
+                    </button>
+                </div>
+            </div>
+        </>
     );
 };

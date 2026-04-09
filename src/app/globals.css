@@ -136,10 +136,14 @@
 }
 
 body {
+    background-color: var(--color-gray-50);
     max-width: 390px;
+    min-height: 100dvh;
+    color: var(--color-gray-900);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+    -webkit-font-smoothing: antialiased;
     margin: 0 auto;
-
-    background-color: var(--b-c-f4f4f2);
 
     font-family: "Pretendard";
 }

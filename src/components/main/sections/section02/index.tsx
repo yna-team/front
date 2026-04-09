@@ -1,61 +1,82 @@
-"use client";
-
-import { LiveBadge } from "@/components/ui/LiveBadge";
-import Image from "next/image";
-
-const ITEMS = [
-    { src: "/images/1.png", alt: "", des: "이달의 라이브 인기", price: 1800 },
-    { src: "/images/2.png", alt: "", des: "인기 상품", price: 2500 },
-    { src: "/images/3.png", alt: "", des: "신상품", price: 3000 },
-    { src: "/images/4.png", alt: "", des: "할인 상품", price: 1500 },
-    { src: "/images/5.png", alt: "", des: "추천 상품", price: 2000 },
-    { src: "/images/6.png", alt: "", des: "인기 라이브", price: 1200 },
-];
-
 export const MainSection02 = () => {
     return (
-        <div className="bg-[#fff] mt-[1px] px-[1rem] pb-[1.25rem] pt-[1rem]">
-            <div className="flex items-center justify-between mb-[.75rem]">
-                <div className="flex items-center gap-[.5rem]">
-                    <LiveBadge />
-                    <h2 className="text-[17px] font-[800] text-[#111] break-all tracking-[-.02em]">
-                        지금 뜨는 쇼핑
+        <>
+            <div className="mb-4 flex items-end justify-between px-4 pt-8">
+                <div>
+                    <p className="mb-1 text-[13px] font-medium tracking-[-0.2px] text-[#E83462]">
+                        가까운 매장 탐색
+                    </p>
+                    <h2 className="text-[22px] font-extrabold leading-[1.25] tracking-[-0.5px] text-[#191919]">
+                        우리동네
                     </h2>
                 </div>
-                <button className="text-[12px] text-[#999] flex items-center gap-[1px] font-[500]">
-                    전체보기<p className="text-[13px]">{">"}</p>
-                </button>
             </div>
-            <div className="gap-[.75rem] flex overflow-x-auto scrollbar-hide">
-                {ITEMS.map((item, i) => (
-                    <div
-                        key={i}
-                        className="cursor-pointer flex-shrink-0 w-[140px] transition-all duration-200 cubic-bezier(.16, 1, .3, 1)"
-                    >
-                        <div className="mb-[.5rem] bg-[#0000000a] rounded-[16px] p-[3px] shadow-[0_2px_12px_rgba(0,0,0,0.07)]">
-                            <div className="bg-[#fff] rounded-[13px] overflow-hidden shadow-[inset_0_1px_0_rgba(255,255,255,0.9)]">
-                                <div className="aspect-[1] overflow-hidden relative flex items-center justify-center">
-                                    <Image
-                                        src={item.src}
-                                        alt={item.alt}
-                                        width={200}
-                                        height={200}
-                                        className="absolute inset-0 w-full h-full object-cover object-center-top"
-                                    />
-                                    <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,0.45)_0%,transparent_50%)]"></div>
-                                    <div className="absolute top-[8px] left-[8px]">
-                                        <LiveBadge />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p className="text-[12px] text-[#555] mb-[2px] break-keep">{item.des}</p>
-                        <p className="text-[14px] font-[800] text-[#111] tracking-[-.02em]">
-                            {item.price.toLocaleString()}원
-                        </p>
+            <div className="flex gap-3 overflow-x-auto px-4 pb-8 [-ms-overflow-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+                <article className="w-[140px] flex-none overflow-hidden rounded-[12px] border border-[#F0F0F0] bg-white">
+                    <div className="relative h-[88px] w-[140px] bg-[#F5F5F5]">
+                        <span className="absolute bottom-2 left-2 rounded-[4px] bg-[#E83462] px-2 py-[3px] text-[10px] font-bold tracking-[-0.1px] text-white">
+                            매니저 방문
+                        </span>
                     </div>
-                ))}
+                    <div className="px-3 pb-3">
+                        <div className="mt-2 text-[12px] tracking-[-0.1px] text-[#8C8C8C]">
+                            카페
+                        </div>
+                        <div className="mt-[3px] text-[14px] font-semibold tracking-[-0.2px] text-[#191919]">
+                            망원커피
+                        </div>
+                        <div className="mt-[3px] text-[12px] tracking-[-0.1px] text-[#8C8C8C]">
+                            도보 5분
+                        </div>
+                    </div>
+                </article>
+                <article className="w-[140px] flex-none overflow-hidden rounded-[12px] border border-[#F0F0F0] bg-white">
+                    <div className="relative h-[88px] w-[140px] bg-[#F5F5F5]">
+                        <span className="absolute bottom-2 left-2 rounded-[4px] bg-[#E83462] px-2 py-[3px] text-[10px] font-bold tracking-[-0.1px] text-white">
+                            매니저 방문
+                        </span>
+                    </div>
+                    <div className="px-3 pb-3">
+                        <div className="mt-2 text-[12px] tracking-[-0.1px] text-[#8C8C8C]">
+                            카페
+                        </div>
+                        <div className="mt-[3px] text-[14px] font-semibold tracking-[-0.2px] text-[#191919]">
+                            망원커피
+                        </div>
+                        <div className="mt-[3px] text-[12px] tracking-[-0.1px] text-[#8C8C8C]">
+                            도보 5분
+                        </div>
+                    </div>
+                </article>
+                <article className="w-[140px] flex-none overflow-hidden rounded-[12px] border border-[#F0F0F0] bg-white">
+                    <div className="relative h-[88px] w-[140px] bg-[#F5F5F5]">
+                        <span className="absolute bottom-2 left-2 rounded-[4px] bg-[#E83462] px-2 py-[3px] text-[10px] font-bold tracking-[-0.1px] text-white">
+                            매니저 방문
+                        </span>
+                    </div>
+                    <div className="px-3 pb-3">
+                        <div className="mt-2 text-[12px] tracking-[-0.1px] text-[#8C8C8C]">
+                            카페
+                        </div>
+                        <div className="mt-[3px] text-[14px] font-semibold tracking-[-0.2px] text-[#191919]">
+                            망원커피
+                        </div>
+                        <div className="mt-[3px] text-[12px] tracking-[-0.1px] text-[#8C8C8C]">
+                            도보 5분
+                        </div>
+                    </div>
+                </article>
             </div>
-        </div>
+            <div className="mt-4">
+                <div className="px-4">
+                    <button
+                        type="button"
+                        className="flex h-[52px] w-full items-center justify-center rounded-[12px] bg-[#FFF0F4] text-[16px] font-bold tracking-[-0.3px] text-[#E83462]"
+                    >
+                        더보기
+                    </button>
+                </div>
+            </div>
+        </>
     );
 };

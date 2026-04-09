@@ -1,52 +1,79 @@
-"use client";
-
-import { LiveBadge } from "@/components/ui/LiveBadge";
-import Image from "next/image";
-
-const ITEMS = [
-    { src: "/images/1.png", alt: "" },
-    { src: "/images/2.png", alt: "" },
-    { src: "/images/3.png", alt: "" },
-    { src: "/images/4.png", alt: "" },
-    { src: "/images/5.png", alt: "" },
-    { src: "/images/6.png", alt: "" },
-];
-
 export const MainSection01 = () => {
     return (
-        <div className="bg-[#fff] mt-[.5rem] px-[1rem] pb-[1.25rem] pt-[1rem]">
-            <div className="flex items-center justify-between mb-[.75rem]">
-                <div className="flex items-center gap-[.5rem]">
-                    <LiveBadge />
-                    <h2 className="text-[17px] font-[800] text-[#111] break-all tracking-[-.02em]">
-                        지금 라이브
+        <>
+            <div className="mb-4 flex items-end justify-between px-4 pt-8">
+                <div>
+                    <p className="mb-1 text-[13px] font-medium tracking-[-0.2px] text-[#E83462]">
+                        우리동네에서 함께
+                    </p>
+                    <h2 className="text-[22px] font-extrabold leading-[1.25] tracking-[-0.5px] text-[#191919]">
+                        우리모임
                     </h2>
                 </div>
-                <button className="text-[12px] text-[#999] flex items-center gap-[1px] font-[500]">
-                    전체보기<p className="text-[13px]">{">"}</p>
-                </button>
             </div>
-            <div className="gap-[.625rem] flex overflow-x-auto scrollbar-hide">
-                {ITEMS.map((item, i) => (
-                    <div
-                        key={i}
-                        className="cursor-pointer flex-shrink-0 w-[130px] transition-all duration-200 cubic-bezier(.16, 1, .3, 1)"
-                    >
-                        <div className="aspect-3/4 shadow-[0_4px_16px_rgba(0,0,0,0.18)] rounded-[.75rem] overflow-hidden relative">
-                            <Image
-                                src={item.src}
-                                alt={item.alt}
-                                width={400}
-                                height={400}
-                                className="absolute inset-0 w-full h-full object-cover object-center-center"
-                            />
-                            <div className="absolute top-[8px] left-[8px]">
-                                <LiveBadge />
-                            </div>
+            <div className="flex gap-3 overflow-x-auto px-4 pb-8 [-ms-overflow-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+                <article className="h-[221px] w-[160px] flex-none overflow-hidden rounded-[14px] border border-[#F0F0F0] bg-white">
+                    <div className="h-[100px] w-[160px] bg-[#F5F5F5]"></div>
+                    <div className="px-3 pt-3 pb-5">
+                        <span className="inline-flex items-center rounded-[4px] bg-[#FFF0F4] px-2 py-[2px] text-[11px] font-bold tracking-[-0.1px] text-[#E83462]">
+                            건강·운동
+                        </span>
+                        <div className="mt-[6px] line-clamp-2 text-[14px] font-semibold leading-[1.4] tracking-[-0.2px] text-[#191919]">
+                            달리기 클럽 망원 14기
+                        </div>
+                        <div className="mt-1 text-[12px] tracking-[-0.1px] text-[#8C8C8C]">
+                            마포구 · 12명
+                        </div>
+                        <div className="mt-1 text-[12px] font-semibold tracking-[-0.1px] text-[#E83462]">
+                            이번 토요일
                         </div>
                     </div>
-                ))}
+                </article>
+                <article className="h-[221px] w-[160px] flex-none overflow-hidden rounded-[14px] border border-[#F0F0F0] bg-white">
+                    <div className="h-[100px] w-[160px] bg-[#F5F5F5]"></div>
+                    <div className="px-3 pt-3 pb-5">
+                        <span className="inline-flex items-center rounded-[4px] bg-[#FFF0F4] px-2 py-[2px] text-[11px] font-bold tracking-[-0.1px] text-[#E83462]">
+                            건강·운동
+                        </span>
+                        <div className="mt-[6px] line-clamp-2 text-[14px] font-semibold leading-[1.4] tracking-[-0.2px] text-[#191919]">
+                            달리기 클럽 망원 14기
+                        </div>
+                        <div className="mt-1 text-[12px] tracking-[-0.1px] text-[#8C8C8C]">
+                            마포구 · 12명
+                        </div>
+                        <div className="mt-1 text-[12px] font-semibold tracking-[-0.1px] text-[#E83462]">
+                            이번 토요일
+                        </div>
+                    </div>
+                </article>
+                <article className="h-[221px] w-[160px] flex-none overflow-hidden rounded-[14px] border border-[#F0F0F0] bg-white">
+                    <div className="h-[100px] w-[160px] bg-[#F5F5F5]"></div>
+                    <div className="px-3 pt-3 pb-5">
+                        <span className="inline-flex items-center rounded-[4px] bg-[#FFF0F4] px-2 py-[2px] text-[11px] font-bold tracking-[-0.1px] text-[#E83462]">
+                            건강·운동
+                        </span>
+                        <div className="mt-[6px] line-clamp-2 text-[14px] font-semibold leading-[1.4] tracking-[-0.2px] text-[#191919]">
+                            달리기 클럽 망원 14기
+                        </div>
+                        <div className="mt-1 text-[12px] tracking-[-0.1px] text-[#8C8C8C]">
+                            마포구 · 12명
+                        </div>
+                        <div className="mt-1 text-[12px] font-semibold tracking-[-0.1px] text-[#E83462]">
+                            이번 토요일
+                        </div>
+                    </div>
+                </article>
             </div>
-        </div>
+            <div className="mt-4">
+                <div className="px-4">
+                    <button
+                        type="button"
+                        className="flex h-[52px] w-full items-center justify-center rounded-[12px] bg-[#FFF0F4] text-[16px] font-bold tracking-[-0.3px] text-[#E83462]"
+                    >
+                        더보기
+                    </button>
+                </div>
+            </div>
+        </>
     );
 };
