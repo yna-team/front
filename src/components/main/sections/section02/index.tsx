@@ -1,4 +1,9 @@
+import Image from "next/image";
+import { useMainSection02 } from "./hook";
+
 export const MainSection02 = () => {
+    const { DATA } = useMainSection02();
+
     return (
         <>
             <div className="mb-4 flex items-end justify-between px-4 pt-8">
@@ -11,62 +16,40 @@ export const MainSection02 = () => {
                     </h2>
                 </div>
             </div>
+
             <div className="flex gap-3 overflow-x-auto px-4 pb-8 [-ms-overflow-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
-                <article className="w-[140px] flex-none overflow-hidden rounded-[12px] border border-[#F0F0F0] bg-white">
-                    <div className="relative h-[88px] w-[140px] bg-[#F5F5F5]">
-                        <span className="absolute bottom-2 left-2 rounded-[4px] bg-[#E83462] px-2 py-[3px] text-[10px] font-bold tracking-[-0.1px] text-white">
-                            매니저 방문
-                        </span>
-                    </div>
-                    <div className="px-3 pb-3">
-                        <div className="mt-2 text-[12px] tracking-[-0.1px] text-[#8C8C8C]">
-                            카페
+                {DATA.map((data, i) => (
+                    <article
+                        key={i}
+                        className="w-[140px] flex-none overflow-hidden rounded-[12px] border border-[#F0F0F0] bg-white"
+                    >
+                        <div className="relative h-[88px] w-[140px] bg-[#F5F5F5]">
+                            <Image
+                                src={data.src}
+                                alt={data.alt}
+                                width={100}
+                                height={160}
+                                className="w-full h-full object-cover object-center-center"
+                            />
+                            <span className="absolute bottom-2 left-2 rounded-[4px] bg-[#E83462] px-2 py-[3px] text-[10px] font-bold tracking-[-0.1px] text-white">
+                                {data.text}
+                            </span>
                         </div>
-                        <div className="mt-[3px] text-[14px] font-semibold tracking-[-0.2px] text-[#191919]">
-                            망원커피
+                        <div className="px-3 pb-3">
+                            <div className="mt-2 text-[12px] tracking-[-0.1px] text-[#8C8C8C]">
+                                {data.category}
+                            </div>
+                            <div className="mt-[3px] text-[14px] font-semibold tracking-[-0.2px] text-[#191919]">
+                                {data.name}
+                            </div>
+                            <div className="mt-[3px] text-[12px] tracking-[-0.1px] text-[#8C8C8C]">
+                                {data.loc}
+                            </div>
                         </div>
-                        <div className="mt-[3px] text-[12px] tracking-[-0.1px] text-[#8C8C8C]">
-                            도보 5분
-                        </div>
-                    </div>
-                </article>
-                <article className="w-[140px] flex-none overflow-hidden rounded-[12px] border border-[#F0F0F0] bg-white">
-                    <div className="relative h-[88px] w-[140px] bg-[#F5F5F5]">
-                        <span className="absolute bottom-2 left-2 rounded-[4px] bg-[#E83462] px-2 py-[3px] text-[10px] font-bold tracking-[-0.1px] text-white">
-                            매니저 방문
-                        </span>
-                    </div>
-                    <div className="px-3 pb-3">
-                        <div className="mt-2 text-[12px] tracking-[-0.1px] text-[#8C8C8C]">
-                            카페
-                        </div>
-                        <div className="mt-[3px] text-[14px] font-semibold tracking-[-0.2px] text-[#191919]">
-                            망원커피
-                        </div>
-                        <div className="mt-[3px] text-[12px] tracking-[-0.1px] text-[#8C8C8C]">
-                            도보 5분
-                        </div>
-                    </div>
-                </article>
-                <article className="w-[140px] flex-none overflow-hidden rounded-[12px] border border-[#F0F0F0] bg-white">
-                    <div className="relative h-[88px] w-[140px] bg-[#F5F5F5]">
-                        <span className="absolute bottom-2 left-2 rounded-[4px] bg-[#E83462] px-2 py-[3px] text-[10px] font-bold tracking-[-0.1px] text-white">
-                            매니저 방문
-                        </span>
-                    </div>
-                    <div className="px-3 pb-3">
-                        <div className="mt-2 text-[12px] tracking-[-0.1px] text-[#8C8C8C]">
-                            카페
-                        </div>
-                        <div className="mt-[3px] text-[14px] font-semibold tracking-[-0.2px] text-[#191919]">
-                            망원커피
-                        </div>
-                        <div className="mt-[3px] text-[12px] tracking-[-0.1px] text-[#8C8C8C]">
-                            도보 5분
-                        </div>
-                    </div>
-                </article>
+                    </article>
+                ))}
             </div>
+
             <div className="mt-4">
                 <div className="px-4">
                     <button

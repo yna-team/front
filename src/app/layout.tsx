@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Nanum_Gothic } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Header } from "@/components/common/Header";
+import { Footer } from "@/components/common/Footer";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -60,7 +62,13 @@ export default function RootLayout({
             lang="en"
             className={`${geistSans.variable} ${geistMono.variable} ${nanumGothic.variable} ${pretendard.variable} h-full antialiased`}
         >
-            <body className="min-h-full flex flex-col">{children}</body>
+            <body className="min-h-full flex flex-col">
+                <div className="relative mx-auto min-h-dvh max-w-[390px] overflow-hidden bg-white flex flex-col">
+                    <Header />
+                    <main className="flex-1 overflow-y-auto pt-15 pb-20">{children}</main>
+                    <Footer />
+                </div>
+            </body>
         </html>
     );
 }

@@ -24,13 +24,14 @@ export const MainCategory = () => {
                         key={label}
                         onClick={() => setSelected(label)}
                         // hover:opacity-80
-                        className="shrink-0 flex flex-col items-center gap-[6px] cursor-pointer pr-[10px] pl-[10px] transition-opacity duration-[180m]"
+                        className="shrink-0 flex flex-col items-center gap-[8px] cursor-pointer pr-[10px] pl-[10px] transition-opacity duration-[180m]"
                     >
                         <button
-                            className="h-9 flex-none rounded-full px-4 text-[14px] min-h-0 min-w-0 bg-[#F0F0F0] font-bold text-[#191919]"
+                            className="h-9 flex-none rounded-full text-[14px] min-h-0 min-w-0 bg-[#F0F0F0] px-[14px]"
                             style={{
-                                color: selected === label ? "#E42A57" : "#4a4a4a",
                                 fontWeight: selected === label ? "700" : "500",
+                                backgroundColor: selected === label ? "#E83462" : "#F5F5F5",
+                                color: selected === label ? "#FFFFFF" : "#4D4D4D",
                             }}
                         >
                             {label}

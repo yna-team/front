@@ -1,6 +1,6 @@
 export const Header = () => {
     return (
-        <header className="sticky top-0 z-50 flex h-14 items-center justify-between bg-white px-4 border-b border-[#F5F5F5] ">
+        <header className="fixed top-0 z-50 flex w-full max-w-[390px] h-14 items-center justify-between bg-white px-4 border-b border-[#F5F5F5] ">
             <div className="flex min-w-0 items-center">
                 <div className="h-12 w-12" aria-hidden="true"></div>
             </div>
